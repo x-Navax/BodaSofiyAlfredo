@@ -19,3 +19,98 @@
 .hero-quote{font-size:clamp(16px,4.3cqw,22px);line-height:1.25;margin:0 0 8px;text-wrap:balance}
 .hero-invite{font-size:clamp(16px,4.2cqw,21px);line-height:1.28;width:84%;margin:0 auto;text-wrap:balance}
 @media(max-width:640px){.hero{padding-top:20px}.hero-card{width:min(440px,100%);height:auto;min-height:0}.discover{margin-top:18px}}
+
+.prostage-footer {
+  margin: 28px -24px -60px;
+  padding: 10px 24px;
+  background: #111314;
+  color: #f8f5ef;
+}
+
+.prostage-inner {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.prostage-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.prostage-brand p {
+  margin: 0;
+  font: 10px/1.5 "Montserrat", Arial, sans-serif;
+  color: #b9b9b9;
+}
+
+.prostage-brand img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.prostage-social {
+  display: flex;
+  align-items: center;
+}
+
+.prostage-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+  color: #d8d8d8;
+  font: 11px/1.5 "Montserrat", Arial, sans-serif;
+  text-decoration: none;
+}
+
+.prostage-social a:hover {
+  color: #ffffff;
+  background: transparent;
+}
+
+.prostage-social svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.prostage-social a:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .prostage-footer {
+    margin: 24px -20px -45px;
+    padding: 10px 20px;
+  }
+
+  .prostage-inner {
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .prostage-brand {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .prostage-brand p {
+    display: none;
+  }
+
+  .prostage-brand img {
+    width: 48px;
+    height: 48px;
+  }
+}
