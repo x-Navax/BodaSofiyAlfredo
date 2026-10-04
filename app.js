@@ -54,8 +54,13 @@
     if (!name) { el('guest-name').setCustomValidity('Escribí tu nombre y apellido.'); el('guest-name').reportValidity(); return; }
     const yes = data.get('attendance') === 'yes';
     const lines = [`¡Hola! Respondo a la invitación de ${config.couple}.`, 'Boda: 19/12/2026', '', `Nombre: ${name}`, `Asistencia: ${yes ? 'Sí, voy a estar' : 'No podré asistir'}`];
-    if (yes) { lines.push(`Cantidad de personas: ${data.get('count')}`, `Acompañantes: ${String(data.get('companions') || '').trim() || 'Sin acompañantes indicados'}`, `Alergias, preferencias o intolerancias: ${String(data.get('food') || '').trim() || 'Ninguna informada'}`); }
-    lines.push('', '¡Gracias por invitarnos!');
+    if (yes) {
+  lines.push(
+    `Alergias, preferencias o intolerancias: ${
+      String(data.get('food') || '').trim() || 'Ninguna informada'
+    }`
+  );
+}
     const message = lines.join('\n'); el('prepared-message').value = message; el('message-fallback').hidden = false;
     if (!connected) { el('form-status').textContent = 'Tu respuesta está preparada. El organizador todavía debe habilitar el número de WhatsApp.'; return; }
     // Navegación directa desde el toque: evita bloqueos de ventanas en Safari/iOS.

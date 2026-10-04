@@ -114,3 +114,18 @@
     height: 48px;
   }
 }
+
+/* Misma tipografía para Sofía y Alfredo */
+#names > span:first-child,
+#names > span:last-child {
+   font-family: "Tangerine", cursive;
+  font-weight: 450;
+  font-style: normal;
+}
+
+/* La inicial usa la misma fuente que el resto */
+#names > span:last-child::first-letter {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
